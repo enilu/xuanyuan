@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>xuanyuan</artifactId>
+        <groupId>cn.enilu</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>xuanyuan-net</artifactId>
+
+    <properties>
+        <httpcomponents.version>4.4.1</httpcomponents.version>
+        <commons.net.version>3.3</commons.net.version>
+        <sftp.jsch.version>0.1.55</sftp.jsch.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>cn.enilu</groupId>
+            <artifactId>xuanyuan-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- Http Lib -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpcomponents.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>${httpcomponents.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>${httpcomponents.version}</version>
+        </dependency>
+        <!--ftp,pop3,smtp,telnet,等网络协议工具包-->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>${commons.net.version}</version>
+        </dependency>
+        <!--sftp工具包-->
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>${sftp.jsch.version}</version>
+        </dependency>
+
+
+    </dependencies>
+
+</project>

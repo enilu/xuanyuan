@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="10 seconds" debug="false">
+	<!-- 应用名称 -->
+	<contextName>dbtools</contextName>
+
+
+
+
+	<!-- 向控制台输出日志 -->
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+<!-- 			<pattern>%d{yyyy-M-d HH:mm:ss} [%thread] %p [%logger{80}]:%L %msg%n</pattern> -->
+			<pattern>%d{yyyy-M-d HH:mm:ss} %p %logger{0} %replace(%msg){'^(.{500}).*$', '$1'}%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<!-- 向文件输出日志 -->
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/dbtools_%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>1000</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-M-d HH:mm:ss} [%thread] %p [%logger{80}]:%L %replace(%msg){'^(.{500}).*$', '$1'}%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+
+	<!-- dataplatform的日志级别 -->
+	<logger name="cn.enilu.dbtools" level="DEBUG"/>
+
+	<!-- root级别的logger -->
+	<root level="INFO">
+		<appender-ref ref="file" />
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>
