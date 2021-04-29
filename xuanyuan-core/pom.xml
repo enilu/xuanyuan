@@ -17,8 +17,16 @@
         <nutz-version>1.r.67</nutz-version>
         <mysql.connector.java.version>5.1.18</mysql.connector.java.version>
         <druid.version>1.1.10</druid.version>
+        <commons.io.version>2.4</commons.io.version>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.io.version}</version>
+        </dependency>
+
         <!--nutz-->
         <dependency>
             <groupId>org.nutz</groupId>

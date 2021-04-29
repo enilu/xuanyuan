@@ -60,7 +60,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>cn.enilu.xuanyuan.application.Main</mainClass>
+                    <mainClass>cn.enilu.xuanyuan.application.XuanyuanApplication</mainClass>
                 </configuration>
             </plugin>
 

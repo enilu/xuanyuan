@@ -17,8 +17,8 @@ import java.util.Set;
  * @Date 2021/4/27 11:01
  * @Version 1.0
  */
-public class Main {
-    private static Logger logger = LoggerFactory.getLogger(Main.class);
+public class XuanyuanApplication {
+    private static Logger logger = LoggerFactory.getLogger(XuanyuanApplication.class);
 
     public static void main(String[] args) {
         init();
@@ -27,7 +27,7 @@ public class Main {
 
     public static void init() {
         try {
-            InputStream input = Class.forName(Main.class.getName()).getResourceAsStream("/conf.properties");
+            InputStream input = Class.forName(XuanyuanApplication.class.getName()).getResourceAsStream("/conf.properties");
             Properties properties = new Properties();
             properties.load(input);
             Set keySet = properties.keySet();

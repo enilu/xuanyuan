@@ -19,15 +19,15 @@ public class SolrServerFactory {
     static ConcurrentHashMap<String, HttpSolrServer> serverPool = new ConcurrentHashMap<String, HttpSolrServer>();
     static ConcurrentHashMap<String, Long> sorIdMap = new ConcurrentHashMap<String, Long>();
 
-    public static Long getSolrId(String name) {
+    public static Long getSolrId(String url,String name) {
         if(sorIdMap.get(name)==null){
-            getSolrServer(name);
+            getSolrServer(url,name);
         }
         Long id = sorIdMap.get(name)+1;
         sorIdMap.put(name,id);
         return id;
     };
-    public static HttpSolrServer getSolrServer(String name) {
+    public static HttpSolrServer getSolrServer(String url,String name) {
         if (serverPool.containsKey(name)) {
             return serverPool.get(name);
         }
@@ -40,7 +40,7 @@ public class SolrServerFactory {
             HttpSolrServer solrServer = null;
 
             try {
-                solrServer = initSolrServer(name);
+                solrServer = initSolrServer(url,name);
                 serverPool.put(name, solrServer);
                 sorIdMap.put(name,maxSolrIndex(solrServer));
             } catch (Exception e) {
@@ -85,11 +85,11 @@ public class SolrServerFactory {
      *
      * @return
      */
-    private static HttpSolrServer initSolrServer(String name) {
+    private static HttpSolrServer initSolrServer(String url,String name) {
         SolrConfig config = SolrConfig.getConfig();
 
 
-        String url = config.getUrl()+name;
+         url = url+name;
         int maxRetries = config.getMaxRetries();
         int connectionTimeout = config.getConnectionTimeout();
         int soTimeout = config.getSoTimeout();

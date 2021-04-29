@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Data
 public class SolrConfig {
-    private String url;
     private Integer maxRetries;
     private Integer connectionTimeout;
     private Integer soTimeout;
@@ -20,7 +19,6 @@ public class SolrConfig {
      */
     public static  SolrConfig getConfig(){
         SolrConfig config = new SolrConfig();
-        config.setUrl(String.valueOf(ConfigUtil.get("solr.url")));
         config.setMaxRetries(Integer.valueOf(ConfigUtil.get("solr.maxRetries")));
         config.setConnectionTimeout(Integer.valueOf(ConfigUtil.get("solr.connectionTimeout")));
         config.setSoTimeout(Integer.valueOf(ConfigUtil.get("solr.soTimeout")));
