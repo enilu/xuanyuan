@@ -21,13 +21,16 @@ public class XuanyuanApplication {
     private static Logger logger = LoggerFactory.getLogger(XuanyuanApplication.class);
 
     public static void main(String[] args) {
-        init();
+        String env = args[0];
+        logger.info("run env:{}",env);
+        init(env);
 
     }
 
-    public static void init() {
+    public static void init(String env) {
         try {
-            InputStream input = Class.forName(XuanyuanApplication.class.getName()).getResourceAsStream("/conf.properties");
+            InputStream input = Class.forName(XuanyuanApplication.class.getName())
+                    .getResourceAsStream("/conf-"+env+".properties");
             Properties properties = new Properties();
             properties.load(input);
             Set keySet = properties.keySet();
@@ -40,7 +43,7 @@ public class XuanyuanApplication {
             }
             logger.info("configuration:  -------------");
             ConfigUtil.init(properties);
-            String runClassName =ConfigUtil.get("system.run.class-name");
+            String runClassName = ConfigUtil.get("system.run.class-name");
             logger.info("[ {} ] start run",runClassName);
             AbstractRunner runner = (AbstractRunner) Class.forName(runClassName).getDeclaredConstructor().newInstance();
             runner.run();

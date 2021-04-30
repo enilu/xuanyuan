@@ -13,25 +13,9 @@
     <dependencies>
         <dependency>
             <groupId>cn.enilu</groupId>
-            <artifactId>xuanyuan-core</artifactId>
+            <artifactId>xuanyuan-lib</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>cn.enilu</groupId>
-            <artifactId>xuanyuan-net</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.enilu</groupId>
-            <artifactId>xuanyuan-pdf</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.enilu</groupId>
-            <artifactId>xuanyuan-solr</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
     </dependencies>
 
     <build>

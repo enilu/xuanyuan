@@ -2,7 +2,7 @@
 
 <configuration scan="true" scanPeriod="10 seconds" debug="false">
 	<!-- 应用名称 -->
-	<contextName>dbtools</contextName>
+	<contextName>xuanyuan</contextName>
 
 
 
@@ -19,7 +19,7 @@
 	<!-- 向文件输出日志 -->
 	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>log/dbtools_%d{yyyy-MM-dd}.log</fileNamePattern>
+			<fileNamePattern>log/xuanyuan_%d{yyyy-MM-dd}.log</fileNamePattern>
 			<maxHistory>1000</maxHistory>
 		</rollingPolicy>
 		<encoder>
@@ -29,8 +29,8 @@
 	</appender>
 
 
-	<!-- dataplatform的日志级别 -->
-	<logger name="cn.enilu.dbtools" level="DEBUG"/>
+	<!-- 项目核心逻辑的日志级别 -->
+	<logger name="cn.enilu.xuanyuan" level="DEBUG"/>
 
 	<!-- root级别的logger -->
 	<root level="INFO">
