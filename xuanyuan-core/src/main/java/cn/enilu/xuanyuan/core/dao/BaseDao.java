@@ -197,6 +197,15 @@ public class BaseDao {
 		return dao.count(c);
 	}
 	/**
+	 * 查询数据库中的数据条数
+	 * @param <T>
+	 * @param table 查询的数据库表
+	 * @return int
+	 */
+	public   int searchCount(String table){
+		return dao.count(table);
+	}
+	/**
 	 * 根据条件查询数据库中的数据条数
 	 * @param <T> 
 	 * @param c         查询的数据库表
