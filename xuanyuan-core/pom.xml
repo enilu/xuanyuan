@@ -14,7 +14,7 @@
         <slf4j.version>1.7.21</slf4j.version>
         <logback.version>1.1.7</logback.version>
         <lombok.version>1.18.6</lombok.version>
-        <nutz-version>1.r.67</nutz-version>
+        <nutz-version>1.r.59</nutz-version>
         <mysql.connector.java.version>5.1.18</mysql.connector.java.version>
         <druid.version>1.1.10</druid.version>
         <commons.io.version>2.4</commons.io.version>
