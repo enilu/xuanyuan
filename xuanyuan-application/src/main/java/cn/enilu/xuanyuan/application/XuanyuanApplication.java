@@ -21,7 +21,11 @@ public class XuanyuanApplication {
     private static Logger logger = LoggerFactory.getLogger(XuanyuanApplication.class);
 
     public static void main(String[] args) {
-        String env = args[0];
+        String env = "dev";
+        if(args!=null &&args.length>0){
+            env = args[0];
+        }
+
         logger.info("run env:{}",env);
         init(env);
 

@@ -8,6 +8,9 @@
     <artifactId>xuanyuan</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <modules>
         <module>xuanyuan-application</module>
         <module>xuanyuan-core</module>
