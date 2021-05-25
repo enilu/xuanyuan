@@ -10,11 +10,14 @@
     <version>1.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java_source_version>1.8</java_source_version>
+        <java_target_version>1.8</java_target_version>
     </properties>
     <modules>
         <module>xuanyuan-application</module>
         <module>xuanyuan-core</module>
         <module>xuanyuan-net</module>
+        <!--xuanyuan-pdf依赖的pdf包较大，如果不需要可以注释掉改模块-->
         <module>xuanyuan-pdf</module>
         <module>xuanyuan-solr</module>
         <module>xuanyuan-lib</module>

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * descript
+ * 演示根据模板生成excel文件
  *
  * @Author enilu
  * @Date 2021/5/18 14:41
@@ -26,6 +26,11 @@ public class CreateExcelRunner extends AbstractRunner {
     @Override
     protected Dao initDao() {
         return null;
+    }
+
+    @Override
+    protected String getDescript() {
+        return "演示根据模板生成excel文件";
     }
 
     @Override

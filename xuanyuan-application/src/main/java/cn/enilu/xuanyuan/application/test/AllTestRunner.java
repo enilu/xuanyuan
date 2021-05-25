@@ -17,6 +17,11 @@ public class AllTestRunner extends AbstractRunner {
     }
 
     @Override
+    protected String getDescript() {
+        return "测试所有用例";
+    }
+
+    @Override
     public void process() {
         AsyncRunner asyncRunner = new AsyncRunner();
         asyncRunner.process();

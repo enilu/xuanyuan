@@ -19,6 +19,7 @@
         <druid.version>1.1.10</druid.version>
         <commons.io.version>2.4</commons.io.version>
         <guava.version>29.0-jre</guava.version>
+        <fastjson.version>1.2.6</fastjson.version>
     </properties>
     <dependencies>
 
@@ -32,6 +33,7 @@
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
         </dependency>
+
 
         <!--nutz-->
         <dependency>
@@ -48,6 +50,11 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
 
         <!--log-->

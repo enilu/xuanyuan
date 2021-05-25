@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * descript
+ * 演示处理mysql数据
  *
  * @Author enilu
  * @Date 2021/4/27 11:09
@@ -26,6 +26,11 @@ public class LocalMySqlRunner extends AbstractRunner {
         String jdbcUser = ConfigUtil.get("jdbc.user");
         String jdbcPass = ConfigUtil.get("jdbc.pass");
         return DaoFactory.dao(jdbcUrl,jdbcUser,jdbcPass);
+    }
+
+    @Override
+    protected String getDescript() {
+        return "演示处理mysql数据";
     }
 
     @Override

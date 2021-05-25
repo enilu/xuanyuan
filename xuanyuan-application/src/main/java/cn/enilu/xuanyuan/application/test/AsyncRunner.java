@@ -56,6 +56,11 @@ public class AsyncRunner extends AbstractRunner {
     }
 
     @Override
+    protected String getDescript() {
+        return "异步处理演示";
+    }
+
+    @Override
     public void process() {
         Ret ret = new MyAsyncProcessor().execute();
         logger.info(Json.toJson(ret));
